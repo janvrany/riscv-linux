@@ -268,6 +268,14 @@ config PCI_HYPERV_INTERFACE
 	  The Hyper-V PCI Interface is a helper driver allows other drivers to
 	  have a common interface with the Hyper-V PCI frontend driver.
 
+config PCIE_MICROSEMI
+	bool "Microsemi AXI PCIe host bridge support"
+	depends on PCI_MSI && OF
+	help
+	  Say 'Y' here if you want kernel to support the Microsemi AXI PCIe
+	  Host Bridge driver.
+
+
 source "drivers/pci/controller/dwc/Kconfig"
 source "drivers/pci/controller/cadence/Kconfig"
 endmenu
